@@ -6,31 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
+    <div class="wrapper">
    
-    
+      <div class="text-center mt-4 name">
+        Send mail
+    </div>
         <div class="input-container">
           <form>
               <label for="emailaddress">Email Address</label>
             <input type="email" id="emailaddress" name="emailaddress"></input>
+            <label for="emailaddress">Name</label>
             <input type="text" id="user_name" name="user_name"></input>
           
           </form>
+          <button class="btn button-send mx-auto" id="eSendButton" target="_blank" href="#">Send Email</button>   
       </div>
       
-             <a class="email-button" id="emailbutton" target="_blank" href="#">Email Us</a>
-       
-        
+                
       <script>
         let eAddress = "someaddress@somedomain.abc"; 
         let eSubject = "Big News";
         let name_user= "This%20might%20get%20the%20job%20done%20in%20terms%20of%20opening%20an%20email%20program%20with%20a%20mailto,%20subject,%20and%20body%20text%20preapplied."
     
-       let emailHandler = document.getElementById('emailbutton');
-    emailHandler.onclick = function() {
+      let eSendHandler = document.getElementById('eSendButton');
+      eSendHandler.onclick = function() {
       eAddress = document.getElementById('emailaddress').value
       name_user = document.getElementById('user_name').value
       let eCombined = `mailto:${eAddress}?subject=${eSubject}&body=${name_user}`
@@ -39,5 +43,6 @@
     };
     
       </script>
+      
   </body>
 </html>
