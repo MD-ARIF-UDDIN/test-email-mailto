@@ -20,9 +20,10 @@
           <form>
               <label for="emailaddress">Email Address</label>
             <input type="email" id="emailaddress" name="emailaddress"></input>
-            <label for="emailaddress">Name</label>
+            <label for="name">Name</label>
             <input type="text" id="user_name" name="user_name"></input>
-          
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject"></input>
           </form>
           <a class="text-4xl btn button-send" id="eSendButton" target="_blank" href="#">Send Email</a> 
       </div>
@@ -36,6 +37,7 @@
       let eSendHandler = document.getElementById('eSendButton');
       eSendHandler.onclick = function() {
       eAddress = document.getElementById('emailaddress').value
+      eSubject= document.getElementById('subject').value
       name_user = document.getElementById('user_name').value
       let eCombined = `mailto:${eAddress}?subject=${eSubject}&body=${name_user}`
       
