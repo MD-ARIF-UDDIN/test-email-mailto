@@ -88,7 +88,7 @@ body {
 
 .wrapper a {
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size:12px;
     color: #03A9F4;
 }
 
@@ -99,6 +99,7 @@ body {
     margin-top: 20px;
 }
 
+  
 @media(max-width: 380px) {
     .wrapper {
         margin: 30px 20px;
